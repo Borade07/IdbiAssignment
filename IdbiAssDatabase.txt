@@ -1,0 +1,30 @@
+CREATE TABLE `IdbiAss` (
+	`id` MEDIUMINT NOT NULL AUTO_INCREMENT,
+	`fName` varchar(50) NOT NULL,
+	`lName` varchar(50) NOT NULL,
+	`moNumber` int(12) NOT NULL,
+	`regDate` date NOT NULL,
+	`regTime` time,
+	`gender` varchar(10) NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
+
+ALTER TABLE `IdbiAss` 
+ADD `gender` varchar(10);
+
+ALTER TABLE `IdbiAss` 
+ADD `email` varchar(20);
+
+ALTER TABLE `IdbiAss`
+MODIFY COLUMN `moNumber` varchar(15);
+
+ALTER TABLE `IdbiAss`
+MODIFY COLUMN `moNumber` int(15);
+
+ALTER TABLE `IdbiAss`
+MODIFY COLUMN `fName` varchar(50) NOT NULL DEFAULT 0;
+
+
+
+INSERT INTO idbiass (fname,lname,monumber,regdate,regtime,gender) VALUES('amey','aas','123','2020-02-20','20:20','male');
